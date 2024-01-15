@@ -15,18 +15,19 @@ class RecieptsListViewModel: ObservableObject {
   @Published var logout = false
   @Published var isAdmin = false
   var selectedRecipe: RecieptModel?
+  var useCases = UseCases(repo: NetworkManager.shared)
   init() {
     loadData()
   }
   
   func loadData() {
     recieps = []
-    NetworkManager.shared.getMeInfo { data in
+    useCases.getMeInfo { data in
       if data?.role.roleID == 1 {
         self.isAdmin = true
       }
     }
-    NetworkManager.shared.getRecieptModel { reciepts in
+    useCases.getRecieptModel { reciepts in
       DispatchQueue.main.async {
         self.recieps = reciepts
         for reciep in self.recieps {
@@ -45,7 +46,7 @@ class RecieptsListViewModel: ObservableObject {
   }
   
   func forceDeleteReciep(id: Int) {
-    NetworkManager.shared.deleteAdminRecipe(id: id)
+    useCases.deleteAdminRecipe(id: id)
     loadData()
   }
   func logoutAction() {

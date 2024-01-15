@@ -109,8 +109,8 @@
             filePath = "CourseProject/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "413"
+            endingLineNumber = "413"
             landmarkName = "loadImage(from:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -125,8 +125,8 @@
             filePath = "CourseProject/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "456"
-            endingLineNumber = "456"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "loadImage(from:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -141,88 +141,10 @@
             filePath = "CourseProject/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "loadImage(from:completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "381E1FA4-2F94-406C-A1B6-B944BCFFFE4A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CourseProject/Network/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "createRecipe(name:method:products:image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "381E1FA4-2F94-406C-A1B6-B944BCFFFE4A - 9dfd8ae1f701a456"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CourseProject.NetworkManager.createRecipe(name: Swift.String, method: Swift.String, products: Swift.String, image: Swift.String) -&gt; ()"
-                  moduleName = "CourseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/egorhlamov/Desktop/labs/mob/CourseProject/CourseProject/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "381E1FA4-2F94-406C-A1B6-B944BCFFFE4A - ed0a06203d03d7d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CourseProject.NetworkManager.createRecipe(name: Swift.String, method: Swift.String, products: Swift.String, image: Swift.String) -&gt; ()"
-                  moduleName = "CourseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/egorhlamov/Desktop/labs/mob/CourseProject/CourseProject/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "1960">
-               </Location>
-               <Location
-                  uuid = "381E1FA4-2F94-406C-A1B6-B944BCFFFE4A - ed0a06203d03d6ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CourseProject.NetworkManager.createRecipe(name: Swift.String, method: Swift.String, products: Swift.String, image: Swift.String) -&gt; ()"
-                  moduleName = "CourseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/egorhlamov/Desktop/labs/mob/CourseProject/CourseProject/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "1960">
-               </Location>
-               <Location
-                  uuid = "381E1FA4-2F94-406C-A1B6-B944BCFFFE4A - ed0a06203d03d6ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CourseProject.NetworkManager.createRecipe(name: Swift.String, method: Swift.String, products: Swift.String, image: Swift.String) -&gt; ()"
-                  moduleName = "CourseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/egorhlamov/Desktop/labs/mob/CourseProject/CourseProject/Network/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "2116">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -235,8 +157,8 @@
             filePath = "CourseProject/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "approveUser(id:)"
             landmarkType = "7">
          </BreakpointContent>

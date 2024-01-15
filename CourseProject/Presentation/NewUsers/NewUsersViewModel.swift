@@ -13,19 +13,20 @@ class NewUsersViewModel: ObservableObject {
   @Published var users: [UserModel] = []
   @Published var logout: Bool = false
   var selectedRecipe: RecieptModel?
+  var useCases = UseCases(repo: NetworkManager.shared)
   init() {
     loadData()
   }
   
   func loadData() {
-      NetworkManager.shared.getNewUsers { newUsers in
+      useCases.getNewUsers { newUsers in
           self.users = newUsers
       }
   }
     
 
     func approveUser(id: Int) {
-        NetworkManager.shared.approveUser(id: id)
+        useCases.approveUser(id: id)
         users.removeAll(where: {$0.id == id})
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.loadData()            

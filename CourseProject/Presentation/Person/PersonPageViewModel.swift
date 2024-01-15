@@ -13,12 +13,13 @@ class PersonPageViewModel: ObservableObject {
   @Published var recieps: [RecieptModel] = []
   @Published var logout: Bool = false
   var selectedRecipe: RecieptModel?
+  var useCases = UseCases(repo: NetworkManager.shared)
   init() {
     loadData()
   }
   
   func loadData() {
-    NetworkManager.shared.getMyRecieptModel { reciepts in
+    useCases.getMyRecieptModel { reciepts in
       DispatchQueue.main.async {
         self.recieps = reciepts
         for reciep in self.recieps {
@@ -29,7 +30,7 @@ class PersonPageViewModel: ObservableObject {
         }
       }
     }
-    NetworkManager.shared.getMeInfo { user in
+    useCases.getMeInfo { user in
       DispatchQueue.main.async {
         if let user = user {
           self.user = user
@@ -41,7 +42,7 @@ class PersonPageViewModel: ObservableObject {
   
   func deleteItem(id: Int) {
     recieps.removeAll {$0.id == id}
-    NetworkManager.shared.deleteRecipe(id: id)
+    useCases.deleteRecipe(id: id)
   }
   
   

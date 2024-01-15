@@ -128,7 +128,7 @@ struct RecieptListView: View {
             .padding(10)          
         }
         .sheet(isPresented: $viewModel.isModalPresented) {
-          CreateView(viewModel: viewModel)
+          CreateView(viewModel: CreateViewModel(), listModel: viewModel)
         }
       }
       .background(.mint)

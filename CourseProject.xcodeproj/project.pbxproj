@@ -12,6 +12,9 @@
 		DE27F9702B2DC45D00C0500C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F96F2B2DC45D00C0500C /* User.swift */; };
 		DE2B15D82B545FA500782C6C /* NewUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B15D72B545FA500782C6C /* NewUsersView.swift */; };
 		DE2B15DA2B545FB300782C6C /* NewUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B15D92B545FB300782C6C /* NewUsersViewModel.swift */; };
+		DE61EFA12B55C7240008D25D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61EFA02B55C7240008D25D /* Repository.swift */; };
+		DE61EFA32B55C72D0008D25D /* UseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61EFA22B55C72D0008D25D /* UseCases.swift */; };
+		DE61EFA52B55CAC00008D25D /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61EFA42B55CAC00008D25D /* CreateViewModel.swift */; };
 		DE9EEE732B1384180033B6A4 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EEE722B1384180033B6A4 /* CreateView.swift */; };
 		DE9EEE752B1389F80033B6A4 /* ReciepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EEE742B1389F80033B6A4 /* ReciepModel.swift */; };
 		DE9EEE782B1391DE0033B6A4 /* DetailRecieptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9EEE772B1391DE0033B6A4 /* DetailRecieptView.swift */; };
@@ -56,6 +59,9 @@
 		DE27F96F2B2DC45D00C0500C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE2B15D72B545FA500782C6C /* NewUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUsersView.swift; sourceTree = "<group>"; };
 		DE2B15D92B545FB300782C6C /* NewUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUsersViewModel.swift; sourceTree = "<group>"; };
+		DE61EFA02B55C7240008D25D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DE61EFA22B55C72D0008D25D /* UseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCases.swift; sourceTree = "<group>"; };
+		DE61EFA42B55CAC00008D25D /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 		DE9EEE722B1384180033B6A4 /* CreateView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		DE9EEE742B1389F80033B6A4 /* ReciepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciepModel.swift; sourceTree = "<group>"; };
 		DE9EEE772B1391DE0033B6A4 /* DetailRecieptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecieptView.swift; sourceTree = "<group>"; };
@@ -123,17 +129,20 @@
 			path = NewUsers;
 			sourceTree = "<group>";
 		};
-		DE9EEE702B1383F70033B6A4 /* New Group */ = {
+		DE9EEE702B1383F70033B6A4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DE61EFA02B55C7240008D25D /* Repository.swift */,
+				DE61EFA22B55C72D0008D25D /* UseCases.swift */,
 			);
-			path = "New Group";
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		DE9EEE712B1384050033B6A4 /* Create */ = {
 			isa = PBXGroup;
 			children = (
 				DE9EEE722B1384180033B6A4 /* CreateView.swift */,
+				DE61EFA42B55CAC00008D25D /* CreateViewModel.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -169,7 +178,7 @@
 		DEC1FF602B09FD4000DA6ED2 /* CourseProject */ = {
 			isa = PBXGroup;
 			children = (
-				DE9EEE702B1383F70033B6A4 /* New Group */,
+				DE9EEE702B1383F70033B6A4 /* Domain */,
 				DEC1FF9B2B0A22C700DA6ED2 /* Network */,
 				DEC1FF9A2B0A22B800DA6ED2 /* Models */,
 				DEC1FF902B09FE2600DA6ED2 /* Presentation */,
@@ -395,14 +404,17 @@
 				DEC1FF9F2B0A252900DA6ED2 /* RecieptsListViewModel.swift in Sources */,
 				DE2B15D82B545FA500782C6C /* NewUsersView.swift in Sources */,
 				DE27F96E2B2DBDB800C0500C /* PersonPageViewModel.swift in Sources */,
+				DE61EFA12B55C7240008D25D /* Repository.swift in Sources */,
 				DEC1FF6B2B09FD4200DA6ED2 /* Persistence.swift in Sources */,
 				DEC1FF642B09FD4000DA6ED2 /* ContentView.swift in Sources */,
 				DE27F9702B2DC45D00C0500C /* User.swift in Sources */,
 				DEC1FF962B0A040400DA6ED2 /* LoginViewModel.swift in Sources */,
 				DEC1FF982B0A0C0100DA6ED2 /* RegisterView.swift in Sources */,
 				DEC1FF6E2B09FD4200DA6ED2 /* CourseProject.xcdatamodeld in Sources */,
+				DE61EFA52B55CAC00008D25D /* CreateViewModel.swift in Sources */,
 				DE9EEE782B1391DE0033B6A4 /* DetailRecieptView.swift in Sources */,
 				DEC1FF622B09FD4000DA6ED2 /* CourseProjectApp.swift in Sources */,
+				DE61EFA32B55C72D0008D25D /* UseCases.swift in Sources */,
 				DEC1FF942B09FE8300DA6ED2 /* LoginView.swift in Sources */,
 				DE9EEE732B1384180033B6A4 /* CreateView.swift in Sources */,
 				DEC1FF9D2B0A230500DA6ED2 /* RecieptsListView.swift in Sources */,

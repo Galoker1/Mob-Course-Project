@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NetworkManager {
+class NetworkManager: Repository {
     static let shared = NetworkManager()
     
     private init () {
@@ -100,50 +100,6 @@ class NetworkManager {
                     
                     // Начинаем выполнение запроса
                     task.resume()
-        }
-    }
-    
-    func createRecipe(
-        name: String,
-        method: String,
-        products: String,
-        image: String
-    ) {
-        if let url = URL(string: "http://localhost:8080/recipe/create") {
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-            let recipeData: [String: Any] = [
-                "name": name,
-                "product": products,
-                "cookingMethod": method,
-                "linkToPicture": image
-            ]
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: recipeData)
-                print(request.httpBody)
-            } catch {
-                print("Error encoding recipe data: \(error)")
-                return
-            }
-
-            let session = URLSession.shared
-            let task = session.dataTask(with: request) { (data, response, error) in
-                if let data = data {
-                    do {
-                        let recipes = try JSONDecoder().decode(RecipeNetworkModels.self, from: data)
-                    } catch {
-                        print("Error decoding recipe data: \(error)")
-                    }
-                } else if let error = error {
-                    print("Error making network request: \(error)")
-                }
-            }
-
-            task.resume()
-        } else {
-            print("Invalid URL")
         }
     }
     

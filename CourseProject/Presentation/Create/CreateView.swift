@@ -1,11 +1,8 @@
 import SwiftUI
 
 struct CreateView: View {
-    @State var name = ""
-    @State var cookingMethod = ""
-    @State var products = ""
-    @State var linkToPicture = ""
-    @ObservedObject var viewModel: RecieptsListViewModel
+    @ObservedObject var viewModel: CreateViewModel
+    @ObservedObject var listModel: RecieptsListViewModel
     var body: some View {
         NavigationView {
           VStack {
@@ -22,7 +19,7 @@ struct CreateView: View {
                   .padding([.top,.horizontal],20)
                 Spacer()
               }
-              TextEditor(text: $name)
+              TextEditor(text: $viewModel.name)
                 .frame(height: 30)
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -42,7 +39,7 @@ struct CreateView: View {
                   .padding([.top,.horizontal],20)
                 Spacer()
               }
-              TextEditor(text: $cookingMethod)
+              TextEditor(text: $viewModel.cookingMethod)
                 .frame(height: 100)
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -60,7 +57,7 @@ struct CreateView: View {
                   .padding([.top,.horizontal],20)
                 Spacer()
               }
-              TextEditor(text: $products)
+              TextEditor(text: $viewModel.products)
                 .frame(height: 100)
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -78,7 +75,7 @@ struct CreateView: View {
                   .padding([.top,.horizontal],20)
                 Spacer()
               }
-              TextEditor(text: $linkToPicture)
+              TextEditor(text: $viewModel.linkToPicture)
                 .frame(height: 30)
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -91,9 +88,9 @@ struct CreateView: View {
                     .padding(.horizontal, 20)
                 )
               Button {
-                NetworkManager.shared.addRecipe(name: name, method: cookingMethod, products: products, image: linkToPicture)
-                viewModel.isModalPresented = false
-                viewModel.loadData()
+                viewModel.create()
+                listModel.isModalPresented = false
+                listModel.loadData()
               } label: {
                 HStack {
                   
